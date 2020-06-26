@@ -7,7 +7,9 @@
 
 namespace WP_Dashboard_Heatmap;
 
-final class Plugin {
+use WP_Dashboard_Heatmap\Api\Registrar as Rest_Api_Registrar;
+
+class Plugin {
 
     /**
      * Plugin version.
@@ -22,6 +24,7 @@ final class Plugin {
      * @since 1.0.0
      */
     public function run() {
+        add_action( 'rest_api_init', [ ( new Rest_Api_Registrar() ), 'register_rest_endpoints' ] );
         add_action( 'wp_dashboard_setup', [ new Widget(), 'register_widget' ] );
     }
 

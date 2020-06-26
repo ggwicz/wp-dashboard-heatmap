@@ -7,7 +7,7 @@
 
 namespace WP_Dashboard_Heatmap;
 
-final class Widget {
+class Widget {
 
     /**
      * Register the dashboard widget in WordPress.
@@ -24,7 +24,7 @@ final class Widget {
      * @since 1.0.0
      */
     public function render_widget() {
-        include Plugin::get_plugin_dir_path() . 'src/views/widget.php';
+        include Plugin::get_plugin_dir_path() . 'templates/widget.php';
     }
 
 }
