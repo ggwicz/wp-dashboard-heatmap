@@ -18,10 +18,9 @@ $autoloader = dirname( WP_DASHBOARD_HEATMAP_FILE ) . '/vendor/autoload.php';
 
 if ( ! is_readable( $autoloader ) ) {
 	/* Translators: Placeholder is the current directory. */
-	throw new \Exception( sprintf( __( 'Please run `composer install` in the plugin folder "%s" and try activating this plugin again.', 'wp-dashboard-heatmap' ), dirname( __FILE__ ) ) );
+	throw new \Exception( sprintf( __( 'Please run `composer install` in the plugin folder "%s" and try activating this plugin again.', 'wp-dashboard-heatmap' ), dirname( WP_DASHBOARD_HEATMAP_FILE ) ) );
 }
 
 require_once $autoloader;
 
-$wp_dashboard_heatmap = new \WP_Dashboard_Heatmap\Plugin();
-$wp_dashboard_heatmap->run();
+( new \WP_Dashboard_Heatmap\Plugin() )->run();
