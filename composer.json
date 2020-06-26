@@ -1,0 +1,25 @@
+{
+    "name": "ggwicz/wp-dashboard-heatmap",
+    "description": "A WordPress dashboard widget showing a heatmap of post publication, similar to GitHub's heatmap of commit activity.",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "George Gecewicz",
+            "email": "ggwicz@gmail.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+			"WP_Dashboard_Heatmap\\": "src/"
+		}
+	},
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+        "squizlabs/php_codesniffer": "^3.5"
+    }
+}
